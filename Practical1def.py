@@ -43,16 +43,16 @@ numTostring()
 
 # In[ ]:
 
+x = int(input('Enter a number : '))
+i = x
 
 def func(x):
-    n = x
-    if(n==0):
+    if(x==2*i):
         return
     else:
-        print(x)
-        x = x+1
-        n = n-1
-    
-x = int(input('Enter a number : '))
+        print(x,end='')
+        func(x+1)
+
 func(x)
+    
 
