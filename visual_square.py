@@ -1,0 +1,10 @@
+import turtle
+urvi_turtle = turtle.Turtle()
+urvi_turtle.forward(100)
+urvi_turtle.right(90)
+urvi_turtle.forward(100)
+urvi_turtle.right(90)
+urvi_turtle.forward(100)
+urvi_turtle.right(90)
+urvi_turtle.forward(100)
+#urvi_turtle.right(90)
