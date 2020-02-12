@@ -1,1 +1,0 @@
-#implement Gaussian function
