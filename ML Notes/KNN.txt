@@ -1,0 +1,21 @@
+K nearest neighbors is a simple algorithm that stores all available cases and classifies new cases based on a similarity measure (e.g., distance functions).
+
+Distance functions are Euclidean, Manhattan, Minkowski. These should be chose when the variable is continuous. When there are categorical variables present, 
+Hamming Distance should be used. 
+
+Cross Validation is a way to determine the value of K. Optimal values of K are between 3 - 10.
+
+The error rate at K=1 is always zero for the training sample. This is because the closest point to any training data point is itself.
+Hence the prediction is always accurate with K=1.
+
+To get the optimal value of K, you can segregate the training and validation from the initial dataset. 
+Now plot the validation error curve to get the optimal value of K. This value of K should be used for all predictions.
+
+In KNN Regression, the output is the property value for the object. This value is the average of the values of k nearest neighbours.
+
+kNN is a type of instance based learning or lazy learning. Both for classification and regression, a useful technique can be to assign weights to the contributions of the
+neighbours, so that the nearer neighbours contribute more to the average than more distant ones. 
+
+Thumb rule is k = sqrt(n), where n is the number of training samples. k value should be odd. k value should not be multiple of the number of classes. 
+It should not be too small(greater influence of noise) or too large(biased towards highly probable classes)
+
