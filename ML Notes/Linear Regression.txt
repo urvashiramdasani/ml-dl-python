@@ -1,5 +1,7 @@
+In Linear Regression ,the dependent variable is continuous, independent variable(s) can be continuous or discrete.
+
 ## Simple Linear Regression
-1) Simple linear regression is useful for finding relationship between two continuous variables.  It looks for statistical relationship but not deterministic relationship. Relationship between two variables is said to be deterministic if one variable can be accurately expressed by the other. 
+1) Simple linear regression is looks for statistical relationship but not deterministic relationship. Relationship between two variables is said to be deterministic if one variable can be accurately expressed by the other. It is both statistical and machine learning algorithm. 
 
 2) Gradient Descent - Partial derivative of the cost function with respect to the parameter can give optimal co-efficient value. 
 
@@ -18,3 +20,9 @@ Residual Analysis helps us to find out how bad the model is behaving. Plot the r
     
   b. Correlation Coefficient - +- sqrt(R^2)
     If slope is negative, it is negative else positive. Range -1 to 1.
+
+Disadvantages - Model may overfit because of collinearity. Most of the real world data is not linear. 
+
+NOTE : OLS (Ordinary Least Squares) is used only in Simple Linear Regression. 
+
+Look - autocorrelation, heteroskedacity in multiple regression. 
