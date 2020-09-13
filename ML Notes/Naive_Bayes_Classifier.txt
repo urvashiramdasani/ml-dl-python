@@ -1,0 +1,8 @@
+1) These are statistical classifiers, which use Bayes Theorem to calculate probabilities. 
+
+2) Let X be a data sample and H be the hypotheses that X belongs to a class. 
+  P(X) - evidence, P(H|X) - posteriori probablity, P(H) - prior probability, P(X|H) - likelihood
+
+  posteriori = likelihood * prior / evidence
+  
+3) Computationally costly. 
