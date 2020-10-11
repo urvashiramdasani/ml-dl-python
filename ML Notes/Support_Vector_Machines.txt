@@ -1,0 +1,58 @@
+A hyperplane is an n-1 dimensional subspace for n dimensional space. Equation of hyperplane : 
+b0 + b1 * x1 + b2 * x2 + ... + bn * xn = 0
+
+Points above this hyperplane follow : b0 + b1 * x1 + b2 * x2 + ... + bn * xn > 0
+Points below this hyperplane follow : b0 + b1 * x1 + b2 * x2 + ... + bn * xn < 0
+
+Separtaing hyperplanes are those that correctly classify the points.
+
+Suppose the two classes are labelled as +1 and -1 i.e., y = +1 and y = -1.
+Therefore, one hyperplane H1: b0 + b1 * x1 + b2 * x2 + ... + bn * xn = -1, H2: b0 + b1 * x1 + b2 * x2 + ... + bn * xn = +1.
+Therefore, y * ( b0 + b1 * x1 + b2 * x2 + ... + bn * xn ) >= 1 is the general condition. ---> (1)
+
+Linear Separable Case Constraint : 1. Pick up a separable hyperplane. 2. Pick the hyperplane for which margin is maximized.
+
+Margin is the distance between the closest points (support vector) on either side. Support vectors are most difficult to classify. 
+
+The decision function is specified by the subset of training set, the support vectors. It is a type of quadratic programming problem.
+
+SVMs work well on smaller complex datasets. SVM is supervised algorithm both for classification and regression. It is a discriminative classifier.
+
+Tip : First look for accuracy of hyperplane to classify classes, then maximize distance. 
+
+SVM is robust to classifiers. 
+
+Pros:
+  1. Effective in higer dimensional spaces. 
+  2. Memory efficient.
+Cons:
+  1. Takes larger time in larger datasets.
+  2. Inefficient for noisy datasets.
+  
+We need to find the weight corresponding to each feature to find the optimal hyperplane. some weights may be zero which means they are not significant.
+Other non-zero weights correspond to support vectors. In linear regression and neural nets, all the points influence the optimality of hyperplane being selected.
+In SVM, only closest points influence. 
+
+The support vectors have their tips on origin, and arrow on critical points. 
+
+d+ = shortest distance between the closest positive point, d- = shortest distance between the closest negative point.
+margin = d+ + d-
+
+The distance from a point(x0,y0) to a line: Ax+By+c = 0 is: |Ax0 +By0 +c|/sqrt(A2+B2), The distance between H0 and H1 is then: |w•x+b|/||w||=1/||w||,
+Hence, the margin is 2/ ||w||. We thus need to minimize ||w||, with (1) as constraint.
+
+Or we can minimize 1/2 * ||w|| ^ 2, which is a quadratic function. 
+
+f is parabolic with one minima and g is constraint. We want to minimize f subject to constraint g. 
+
+For solution, the contours of f and g should be tangent. At tangent, their perpendiculars (gradient vectors) should be parallel. Gradient of g must be 0.  
+
+See derivation of Lagrangian from here : http://web.mit.edu/6.034/wwwbob/svm-notes-long-08.pdf
+After this derivation, we will get a equations for w and b. We substitute these b and w values in original equation and get rid of these variables.
+We now have only 'a' left in equation, so we will maximize over 'a' (Dual). Now we will differentaiate the dual problem with 'a' and set it to 0.
+Most of the a's will be zero, the non-zero ones will be our support vectors (thats why we want to maximize over a, as we want to maximize the margin)
+
+Kunh Tucker Theorem - The dual problem. Now when we have got the a's, we will substitute in w and b to get their values. We have found the values of w
+and we can make predictions based on the sign of w^T * x + b. Since most of the weights will be zero due to zero a's, it will reduce the dimesionality. 
+
+Look at the insights into inner product in the same link, very nicely explained!
