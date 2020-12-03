@@ -5,4 +5,28 @@
 
   posteriori = likelihood * prior / evidence
   
-3) Computationally costly. 
+3) Computationally costly. Works well with large datasets.
+
+4) Naive bayes is a naive approach since it treats all word orders as same. In case of document classification, it ignores all the grammar, punctutation.
+It just consider language as the bag of words. It has high bias and low variance. 
+
+Pros - 
+1. Easy and fast
+2. Better performance in independence and categorical variables
+
+Cons - 
+1. Zero frequency (Use Laplace estimation, add 1)
+2. Known as bad estimator
+3. Independent predictor assumption
+
+Applications - Credit scoring, Medical data classification, real time prediction (eager learner), multiclass prediction, text classification, spam filtering, 
+sentiment analysis, recommdation system
+
+Gaussian NB - Features follow normal distribution
+Multinomial NB - discrete counts
+Bernoulli NB - Features have binary values
+
+-> If continuous features don't have normal distribution, make it normal.
+-> For zero frequency problem, apply laplace estimation
+-> Remove correlated features
+-> Focus on preprocessing and feature selection
