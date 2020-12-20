@@ -1,0 +1,4 @@
+Competitve neural networks are those in which there is only one output neuron is active at a time.
+Output neurons are interconnected. These connections are called Lateral or inhibitory connections.
+Connection from input to put are called feedforward connection or excitatory.
+weight vectors of winning vector approach the input vector with learning.

@@ -1,0 +1,15 @@
+1. Confusion matrix - See diagram. True Positive (TP), True Negative (TN), False Positive (FP), False Negative (FN). Minimize FN in case of medical, FP in case of spam email classification.
+
+2. Accuracy - (TP + TN) / (TP + TN + FP + FN). Use this when classes are balanced.
+
+3. Precision - TP / (TP + FP)
+
+4. Recall or sensitivity - TP / (TP + FN)
+
+5. Specificity - TN / (TN + FP) - exact opposite of recall
+
+6. F1 score - represents both recall and precision. It is the harmonic mean of recall and precision. If both are equal, then harmonic mean is average. But if they are different, it is smaller.
+
+F1 score = 2 * Precision * Recall / (Precision + Recall)
+
+7. Error rate = 1 - Accuracy = (FP + FN) / (TP + TN + FP + FN)

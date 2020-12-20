@@ -56,3 +56,6 @@ Kunh Tucker Theorem - The dual problem. Now when we have got the a's, we will su
 and we can make predictions based on the sign of w^T * x + b. Since most of the weights will be zero due to zero a's, it will reduce the dimesionality. 
 
 Look at the insights into inner product in the same link, very nicely explained!
+
+Hard margin - we don't want any error while classification. Used when data is well behaved.
+Soft margin - some error is allowed.

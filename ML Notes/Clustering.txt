@@ -1,0 +1,20 @@
+Unsupervised learning algorithm.  it is used as a process to find meaningful structure, explanatory underlying processes, generative features, and groupings inherent in a set of examples.
+
+-> Clustering has applications in Market segmentation, social network analysis, organize computing clutsers, astronomical data analysis.
+
+-> this will give us insight into underlying patterns of different groups.
+
+-> Clustering is also used to reduce the dimensionality of the data when you are dealing with a copious number of variables.
+
+-> Treat outliers before calculating distance. Standardize variables. 
+
+1. k-means - k = number of clusters
+-> Assign each data point to a cluster using euclidean distance between centroid and data point. Calculate the new centroid. Repeat until no changes occur.
+
+-> Elbow method is used to decide the optimal number of clusters (k). Plot the sum squared error with values of k to find optimal k.
+
+-> Similarity measure is the distance between data points.
+
+2. Hierarchial - Assign all data points a cluster. It combines two nearest data points into one cluster.
+
+-> Look at the technique described here : https://towardsdatascience.com/clustering-unsupervised-learning-788b215b074b

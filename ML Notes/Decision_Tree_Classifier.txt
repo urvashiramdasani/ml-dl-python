@@ -1,0 +1,29 @@
+-> Decision trees are used for inductive inference. They are for approximating dicrete valued functions, robust to noisy data and capable of learning disjunctive functions.
+
+-> An instance is classified by starting at the root node of the tree, testing the attribute
+specified by this node, then moving down the tree branch corresponding to the
+value of the attribute in the given example. This process is then repeated for the
+subtree rooted at the new node.
+
+-> Problems with below characteristics are best suited for decision tree : -
+
+1. Instances are represented by attribute-value pairs.
+2. The targetfunction has discrete output values.
+3. Disjunctive descriptions may be required.
+4. The training data may contain errors.
+5. The training data may contain missing attribute values.
+
+-> Applications - medical patients by their disease, equipment malfunctions by their cause, and loan applicants by their likelihood of defaulting on payments.
+
+-> each instance attribute is evaluated using a statistical test to determine how well it alone classifies the training examples. The best attribute is selected and used as the test at the root node of the tree. A descendant of the root node is then created for each possible value of this attribute, and the training examples are sorted to the appropriate descendant node. The entire process is then repeated using the training examples associated with each descendant node to select the best attribute to test at that point in the tree.
+
+-> a statistical property, called informution gain, that measures how well a given attribute separates the training examples according to their target classification.
+
+->  a measure commonly used in information theory, called entropy, that characterizes the (im)purity
+of an arbitrary collection of examples.
+
+Entropy(S) = -p1 * logp1 - p2 * logp2, p1 is the proportion of positive examples in S and p2 is the proportion of negative examples in S. (log base 2)
+
+-> Entropy is 0 when the collection contains all examples of one class. It is 1 when the collection contains equal examples of both classes. Entropy is between 0 and 1. (See graph)
+
+->  information gain, is simply the expected reduction in entropy caused by partitioning the examples according to this attribute.
